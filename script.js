@@ -4,11 +4,11 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
   var campoB = document.getElementById('campoB').value;
   var message = document.getElementById('message');
 
-  if (campoB > campoA) {
-      message.innerHTML = "Formulário válido!";
-      message.style.color = "green";
-  } else {
+  if (campoB === campoA) {
+      message.innerHTML = "Os números digitados são iguais.";
+  } else if (campoB > campoA) {
       message.innerHTML = "Formulário inválido! O número B deve ser maior que o número A.";
-      message.style.color = "red";
+  } else {
+      message.innerHTML = "Formulário válido!";
   }
 });
